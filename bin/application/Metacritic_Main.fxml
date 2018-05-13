@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Metacritic_Controller">
+   <children>
+      <ImageView fitHeight="216.0" fitWidth="343.0" layoutX="14.0" layoutY="-44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/metacritic_logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exit_icon" fitHeight="76.0" fitWidth="100.0" layoutX="1110.0" layoutY="14.0" onMouseClicked="#exit_app" onMouseEntered="#exit_onhover" onMouseExited="#exit_onleave" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@Images/close%20(1).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="369.0" layoutY="27.0" prefHeight="50.0" prefWidth="498.0" text=":  Top 100 Video Games of All Time (Based on Platform)" textFill="WHITE">
+         <font>
+            <Font name="SteelfishRg-Regular" size="37.0" />
+         </font>
+      </Label>
+      <TableView fx:id="main_table" layoutX="40.0" layoutY="180.0" prefHeight="578.0" prefWidth="615.0">
+        <columns>
+          <TableColumn fx:id="metascore_col" prefWidth="93.59994125366211" text="Metascore" />
+          <TableColumn fx:id="gameTitle_col" prefWidth="296.80006408691406" text="Game Title" />
+            <TableColumn fx:id="userScore_col" prefWidth="91.20001220703125" text="User Score" />
+            <TableColumn fx:id="releaseDate_col" prefWidth="133.5999755859375" text="Release Date" />
+        </columns>
+      </TableView>
+      <RadioButton layoutX="46.0" layoutY="139.0" mnemonicParsing="false" text="Playstation 4" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle_platform" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="201.0" layoutY="139.0" mnemonicParsing="false" text="XboxOne" textFill="WHITE" toggleGroup="$toggle_platform">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="328.0" layoutY="139.0" mnemonicParsing="false" text="Switch" textFill="WHITE" toggleGroup="$toggle_platform">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="429.0" layoutY="139.0" mnemonicParsing="false" text="PC" textFill="WHITE" toggleGroup="$toggle_platform">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="503.0" layoutY="139.0" mnemonicParsing="false" text="3DS" textFill="WHITE" toggleGroup="$toggle_platform">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="590.0" layoutY="137.0" mnemonicParsing="false" text="iOS" textFill="WHITE" toggleGroup="$toggle_platform">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>
