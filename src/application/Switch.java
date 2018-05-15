@@ -2,7 +2,9 @@ package application;
 
 public class Switch extends VideoGame{
 	
-	Switch(Integer metascore, String gameTitle, Double userScore, String releaseDate) {
-		super(metascore, gameTitle, userScore, releaseDate);
+	Switch(Integer metascore, String gameTitle, String userScore, String releaseDate, String platform) {
+		super(metascore, gameTitle, userScore, releaseDate, platform);
+		
+		platform = "Switch";
 	}
 }

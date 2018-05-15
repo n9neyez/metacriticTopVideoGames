@@ -32,15 +32,16 @@
             <Font name="SteelfishRg-Regular" size="37.0" />
          </font>
       </Label>
-      <TableView fx:id="main_table" layoutX="41.0" layoutY="172.0" prefHeight="578.0" prefWidth="615.0">
+      <TableView fx:id="main_table" layoutX="32.0" layoutY="172.0" prefHeight="578.0" prefWidth="827.0">
         <columns>
-          <TableColumn fx:id="metascore_col" prefWidth="93.59994125366211" text="Metascore" />
-          <TableColumn fx:id="gameTitle_col" prefWidth="296.80006408691406" text="Game Title" />
-            <TableColumn fx:id="userScore_col" prefWidth="91.20001220703125" text="User Score" />
-            <TableColumn fx:id="releaseDate_col" prefWidth="133.5999755859375" text="Release Date" />
+          <TableColumn fx:id="metascore_col" prefWidth="109.59997177124023" text="Metascore" />
+          <TableColumn fx:id="gameTitle_col" prefWidth="281.6000213623047" text="Game Title" />
+            <TableColumn fx:id="userScore_col" prefWidth="106.4000244140625" text="User Score" />
+            <TableColumn fx:id="releaseDate_col" prefWidth="132.800048828125" text="Release Date" />
+            <TableColumn fx:id="platform_col" minWidth="5.60009765625" prefWidth="196.79998779296875" text="Platform" />
         </columns>
       </TableView>
-      <RadioButton fx:id="radio_playstation4" layoutX="47.0" layoutY="760.0" mnemonicParsing="false" text="Playstation 4" textFill="WHITE">
+      <RadioButton fx:id="radio_playstation4" layoutX="83.0" layoutY="764.0" mnemonicParsing="false" text="Playstation 4" textFill="WHITE">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>
@@ -48,32 +49,40 @@
             <ToggleGroup fx:id="toggle_platform" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="radio_xboxOne" layoutX="202.0" layoutY="760.0" mnemonicParsing="false" text="XboxOne" textFill="WHITE" toggleGroup="$toggle_platform">
+      <RadioButton fx:id="radio_xboxOne" layoutX="238.0" layoutY="764.0" mnemonicParsing="false" text="XboxOne" textFill="WHITE" toggleGroup="$toggle_platform">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="radio_switch" layoutX="329.0" layoutY="760.0" mnemonicParsing="false" text="Switch" textFill="WHITE" toggleGroup="$toggle_platform">
+      <RadioButton fx:id="radio_switch" layoutX="365.0" layoutY="764.0" mnemonicParsing="false" text="Switch" textFill="WHITE" toggleGroup="$toggle_platform">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="radio_pc" layoutX="430.0" layoutY="760.0" mnemonicParsing="false" text="PC" textFill="WHITE" toggleGroup="$toggle_platform">
+      <RadioButton fx:id="radio_pc" layoutX="466.0" layoutY="764.0" mnemonicParsing="false" text="PC" textFill="WHITE" toggleGroup="$toggle_platform">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="radio_3DS" layoutX="504.0" layoutY="760.0" mnemonicParsing="false" text="3DS" textFill="WHITE" toggleGroup="$toggle_platform">
+      <RadioButton fx:id="radio_3DS" layoutX="540.0" layoutY="764.0" mnemonicParsing="false" text="3DS" textFill="WHITE" toggleGroup="$toggle_platform">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="radio_iOS" layoutX="591.0" layoutY="758.0" mnemonicParsing="false" text="iOS" textFill="WHITE" toggleGroup="$toggle_platform">
+      <RadioButton fx:id="radio_iOS" layoutX="627.0" layoutY="762.0" mnemonicParsing="false" text="iOS" textFill="WHITE" toggleGroup="$toggle_platform">
          <font>
             <Font name="Verdana" size="16.0" />
          </font>
       </RadioButton>
-      <Button fx:id="btn_showTableData" layoutX="41.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#show_table" prefHeight="40.0" prefWidth="228.0" stylesheets="@application.css" text="Show Table Data">
+      <RadioButton fx:id="radio_showAll" layoutX="709.0" layoutY="762.0" mnemonicParsing="false" text="Show All" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle_platform1" />
+         </toggleGroup>
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="btn_showTableData" layoutX="314.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#show_table" prefHeight="40.0" prefWidth="228.0" stylesheets="@application.css" text="Show Table Data">
          <font>
             <Font name="Verdana Bold" size="21.0" />
          </font>

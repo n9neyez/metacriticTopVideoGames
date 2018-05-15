@@ -11,14 +11,16 @@ public class VideoGame {
 	
 	private final SimpleIntegerProperty metascore;
 	private final SimpleStringProperty gameTitle;
-	private final SimpleDoubleProperty userScore;
+	private final SimpleStringProperty userScore;
 	private final SimpleStringProperty releaseDate;
+	private final SimpleStringProperty platform;
 	
-	public VideoGame(Integer metascore, String gameTitle, Double userScore, String releaseDate) {
+	public VideoGame(Integer metascore, String gameTitle, String userScore, String releaseDate, String platform) {
 		this.metascore = new SimpleIntegerProperty(metascore);
 		this.gameTitle = new SimpleStringProperty(gameTitle);
-		this.userScore = new SimpleDoubleProperty(userScore);
+		this.userScore = new SimpleStringProperty(userScore);
 		this.releaseDate = new SimpleStringProperty(releaseDate);
+		this.platform = new SimpleStringProperty(platform);
 	}
 	// metascore set/get
 	public void setMetascore(Integer metaScore) {
@@ -43,13 +45,13 @@ public class VideoGame {
 	}
 	
 	// userScore set/get
-	public void setUserScore(Double score) {
+	public void setUserScore(String score) {
 		userScore.set(score);
 	}
-	public Double getUserScore() {
+	public String getUserScore() {
 		return userScore.get();
 	}
-	public DoubleProperty userScoreProperty() {
+	public StringProperty userScoreProperty() {
 		return userScore;
 	}
 	
@@ -62,5 +64,16 @@ public class VideoGame {
 	}
 	public StringProperty releaseDateProperty() {
 		return releaseDate;
+	}
+	
+	// platform set/get
+	public void setPlatform(String platform) {
+		this.platform.set(platform);
+	}
+	public String getPlatform() {
+		return platform.get();
+	}
+	public StringProperty platformProperty() {
+		return platform;
 	}
 }
